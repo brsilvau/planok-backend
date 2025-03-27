@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-bjmld%17rzragshdxxgy4%y-1_+%+2q#*6my@18-+!xxks0!l*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['planok-backend.onrender.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
