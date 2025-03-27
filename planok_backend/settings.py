@@ -82,10 +82,10 @@ WSGI_APPLICATION = 'planok_backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.environ.get('POSTGRES_DB','postgres'),
-        'USER': os.environ.get('POSTGRES_USER', 'postgres'),
-        'PASSWORD': os.environ.get('POSTGRES_PASSWORD','1234'),
-        'HOST': os.environ.get('POSTGRES_HOST','localhost'),
+        'NAME': os.environ.get('POSTGRES_DB','planok'),
+        'USER': os.environ.get('POSTGRES_USER', 'planok'),
+        'PASSWORD': os.environ.get('POSTGRES_PASSWORD',''),
+        'HOST': os.environ.get('POSTGRES_HOST','dpg-cvimtbggjchc73cvl7o0-a.oregon-postgres.render.com'),
         'PORT': os.environ.get('POSTGRES_PORT','5432'),
     }
 }
@@ -151,3 +151,5 @@ SPECTACULAR_SETTINGS = {
 }
 
 CORS_ALLOW_ALL_ORIGINS = True
+
+CSRF_TRUSTED_ORIGINS = ['https://planok-backend.onrender.com']
