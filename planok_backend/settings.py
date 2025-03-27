@@ -82,10 +82,10 @@ WSGI_APPLICATION = 'planok_backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.environ.get('POSTGRES_DB','planok'),
-        'USER': os.environ.get('POSTGRES_USER', 'planok'),
-        'PASSWORD': os.environ.get('POSTGRES_PASSWORD',''),
-        'HOST': os.environ.get('POSTGRES_HOST','dpg-cvimtbggjchc73cvl7o0-a.oregon-postgres.render.com'),
+        'NAME': os.environ.get('POSTGRES_DB','postgres'),
+        'USER': os.environ.get('POSTGRES_USER', 'postgres'),
+        'PASSWORD': os.environ.get('POSTGRES_PASSWORD','1234'),
+        'HOST': os.environ.get('POSTGRES_HOST','127.0.0.1'),
         'PORT': os.environ.get('POSTGRES_PORT','5432'),
     }
 }
@@ -132,13 +132,15 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-REST_FRAMEWORK = {""" 
+""" 
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticated',
     ), """
+
+REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10,
