@@ -1,0 +1,56 @@
+# Archivos compilados de Python
+*.py[cod]
+__pycache__/
+*.so
+
+# Distribuciones y archivos de construcción
+build/
+develop-eggs/
+dist/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Archivos de entorno virtual
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Archivos de configuración local de Django
+*.log
+local_settings.py
+
+# Archivos estáticos y de medios (puedes modificar según tu configuración)
+staticfiles/
+media/
+
+# Archivos de migraciones de Django (si no deseas versionarlos, aunque generalmente se versionan)
+# **Nota:** Es común versionar las migraciones, pero si prefieres ignorarlas, descomenta lo siguiente:
+# migrations/
+
+# Archivos de entorno
+.env
+*.env
+
+# Archivos de Docker
+docker-compose.override.yml
+*.pid
+
+# Archivos de configuración de IDEs/editores
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Otros archivos de sistema
+.DS_Store
+Thumbs.db
